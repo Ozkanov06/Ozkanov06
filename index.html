@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Scalper Signal Bot</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { background: #1a1a1a; color: white; font-family: sans-serif; text-align: center; }
+        .header { padding: 20px; border-bottom: 1px solid #333; }
+        .success-rate { font-size: 2.5em; color: #00ff88; margin: 10px 0; text-shadow: 0 0 10px #00ff88; }
+        .signal-card { background: #2a2a2a; border-radius: 15px; padding: 20px; margin: 15px; border-left: 5px solid #00ff88; }
+        .btn-call { background: #00ff88; color: black; padding: 15px 40px; border-radius: 10px; font-weight: bold; }
+        .btn-put { background: #ff4444; color: white; padding: 15px 40px; border-radius: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>🚀 PRO SCALPER</h2>
+        <div class="success-rate" id="rate">%82 BAŞARI</div>
+    </div>
+    
+    <div class="signal-card">
+        <h3>EURUSD=X</h3>
+        <p>YÖN: <span id="direction">BEKLENİYOR...</span></p>
+        <div style="display: flex; justify-content: space-around;">
+            <div class="btn-call">CALL</div>
+            <div class="btn-put">PUT</div>
+        </div>
+    </div>
+
+    <div id="history">
+        </div>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand(); // Uygulamayı tam ekran açar
+    </script>
+</body>
+</html>
